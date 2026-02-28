@@ -1,6 +1,8 @@
-import { heroData} from "./data";
+import { HeroData } from "./data";
 
 export function getSecretHero(){
-    const randomIndex = Math.floor(Math.random() * heroData.length);
-    return heroData[randomIndex]
+    /*const randomIndex = Math.floor(Math.random() * HeroData.length);
+    return HeroData[randomIndex]
+    */
+    return HeroData[2]
 }
