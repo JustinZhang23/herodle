@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Basilisk",
+    "faction": "Shadow",
+    "class": "Ranger",
+    "star": 5,
+    "effect": "Skill"
+  },
+  {
+    "name": "Norton Haig",
+    "faction": "Shadow",
+    "class": "Warrior",
+    "star": 5,
+    "effect": "Skill"
+  },
+  {
+    "name": "Betty",
+    "faction": "Shadow",
+    "class": "Mage",
+    "star": 5,
+    "effect": "DoT, Control"
+  },
+  {
+    "name": "Azrael",
+    "faction": "Shadow",
+    "class": "Assassin",
+    "star": 5,
+    "effect": "Skill"
+  },
+  {
+    "name": "Annabelle",
+    "faction": "Shadow",
+    "class": "Priest",
+    "star": 5,
+    "effect": "Skill"
+  },
+  {
+    "name": "Onkirimaru",
+    "faction": "Shadow",
+    "class": "Warrior",
+    "star": 5,
+    "effect": "DoT"
+  }
+]
