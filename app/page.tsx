@@ -202,7 +202,7 @@ export default function Home() {
                                 {/* Row of boxes for each attribute (grid items stretch to match tallest cell) */}
                                 <div className="grid grid-cols-7 gap-2 items-stretch">
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.name)} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                        <span className="truncate text-base font-medium">{formatValue(entry.guess?.name)}</span>
+                                        <span className="truncate text-base">{formatValue(entry.guess?.name)}</span>
                                     </div>
 
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.faction)} text-center px-2 py-3 rounded-xl shadow-md`}>
@@ -249,7 +249,7 @@ export default function Home() {
             )}
 
             {/* how to play section below results */}
-            <div className="mt-6 w-full max-w-md text-center text-white-600">
+            <div className="mt-6 w-full max-w-lg text-center text-white-600">
                 <button
                     className="text-white-600 hover:underline text-lg"
                     onClick={() => setShowHowTo((prev) => !prev)}
