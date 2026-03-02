@@ -97,7 +97,7 @@ export default function Home() {
         >
             {/* logo header */}
             <div className="mb-0">
-                <img src="/herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
+                <img src="/Herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
             </div>
 
             {!gameWon ? (
@@ -152,7 +152,7 @@ export default function Home() {
                 </div>
             ) : (
                 <div className="flex flex-col items-center gap-4 mb-4">
-                    <div className="text-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex justify-center items-center text-transparent bg-clip-text font-semibold text-center leading-tight">
+                    <div className="text-lg bg-gradient-to-br from-blue-500 to-purple-500 flex justify-center items-center text-transparent bg-clip-text font-semibold text-center leading-tight">
                         Solved in {history.length} guess{history.length === 1 ? '' : 'es'}!
                     </div>
 
@@ -166,16 +166,16 @@ export default function Home() {
             )}
 
             {history.length > 0 && (
-                <div className="mt-2 w-full max-w-5xl">
+                <div className="mt-2 w-full max-w-2xl">
                     {/* Column titles */}
-                    <div className="grid grid-cols-7 gap-2 text-xl font-semibold text-white-700">
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Name</div>
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Faction</div>
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Class</div>
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Star</div>
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Dot</div>
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Control</div>
-                        <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Misc</div>
+                    <div className="grid grid-cols-7 gap-2 text-md font-semibold text-white-700">
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Name</div>
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Faction</div>
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Class</div>
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Star</div>
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Dot</div>
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Control</div>
+                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Misc</div>
                     </div>
 
                     {history.map((entry, index) => {
@@ -249,15 +249,15 @@ export default function Home() {
             )}
 
             {/* how to play section below results */}
-            <div className="mt-6 w-full max-w-2xl text-center mx-auto">
+            <div className="mt-6 w-full max-w-md text-center text-white-600">
                 <button
-                    className="text-white-600 hover:underline text-3xl"
+                    className="text-white-600 hover:underline text-lg"
                     onClick={() => setShowHowTo((prev) => !prev)}
                 >
                     {showHowTo ? 'Hide' : 'How to Play'}
                 </button>
                 {showHowTo && (
-                    <div className="text-xl mt-2 bg-black/50 p-2 rounded mx-auto text-left leading-relaxed text-white">
+                    <div className="text-md mt-2 bg-black/50 p-2 rounded mx-auto text-left leading-relaxed text-white">
                         <p>The objective of this game is to guess the <strong>Idle Hero</strong> based on the stats and hints provided throughout the game.</p>
                         <p className="mt-2">For every hero submitted, each attribute will appear as green, yellow, or red depending on how close it is to the attributes of the Idle Hero.</p>
                         <p className="mb-4">
@@ -298,13 +298,17 @@ export default function Home() {
                 )}
             </div>
 
-            <div className="mt-4 text-white-600 text-lg text-center">
-                Made by <a href="https://github.com/justinzhang23" className="underline" target="_blank" rel="noopener noreferrer">Justin Zhang
+            <div className="mt-8 text-white-600 text-xs text-center">
+                Made by 
+            </div>
+
+            <div className="text-white-600 text-xs text-center">
+                <a href="https://github.com/justinzhang23" className="underline" target="_blank" rel="noopener noreferrer">Justin Zhang
                 </a>
             </div>
 
 
-            <footer className="mt-4 text-white bg-black/20 text-lg text-center py-2 px-4 border-t border-white/10 rounded-4xl">
+            <footer className="mt-8 text-white bg-black/20 text-sm text-center py-2 px-4 border-t border-white/10 rounded-4xl">
                 <p>
                     Idle Heroes is developed and published by{" "}
                     <a
