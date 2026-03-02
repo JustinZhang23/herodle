@@ -97,7 +97,7 @@ export default function Home() {
         >
             {/* logo header */}
             <div className="mb-0">
-                <img src="/Herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
+                <img src="/herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
             </div>
 
             {!gameWon ? (
@@ -152,13 +152,13 @@ export default function Home() {
                 </div>
             ) : (
                 <div className="flex flex-col items-center gap-4 mb-4">
-                    <div className="text-6xl bg-gradient-to-br from-blue-500 to-purple-500 flex justify-center items-center text-transparent bg-clip-text font-semibold text-center leading-tight">
+                    <div className="text-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex justify-center items-center text-transparent bg-clip-text font-semibold text-center leading-tight">
                         Solved in {history.length} guess{history.length === 1 ? '' : 'es'}!
                     </div>
 
                     <button
                         onClick={handleNewHero}
-                        className="bg-gradient-to-br from-blue-500 to-purple-500 hover:from-blue-700 to-purple-700 text-white-600 px-4 py-2 rounded-4xl hover:bg-purple-700 text-white rounded-2xl shadow-md transition"
+                        className="bg-gradient-to-br from-blue-500 to-purple-500 hover:from-blue-700 to-purple-700 px-3 py-1.5 text-sm rounded-full shadow-md transition"
                     >
                         Try Another Hero
                     </button>
@@ -168,7 +168,7 @@ export default function Home() {
             {history.length > 0 && (
                 <div className="mt-2 w-full max-w-5xl">
                     {/* Column titles */}
-                    <div className="grid grid-cols-7 gap-2 text-2xl font-semibold text-white-700">
+                    <div className="grid grid-cols-7 gap-2 text-xl font-semibold text-white-700">
                         <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Name</div>
                         <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Faction</div>
                         <div className="text-center bg-black/25 px-4 py-1 rounded-4xl">Class</div>
@@ -298,13 +298,13 @@ export default function Home() {
                 )}
             </div>
 
-            <div className="mt-4 text-white-600 text-xl text-center">
+            <div className="mt-4 text-white-600 text-lg text-center">
                 Made by <a href="https://github.com/justinzhang23" className="underline" target="_blank" rel="noopener noreferrer">Justin Zhang
                 </a>
             </div>
 
 
-            <footer className="mt-4 text-white bg-black/20 text-xl text-center py-2 px-4 border-t border-white/10 rounded-4xl">
+            <footer className="mt-4 text-white bg-black/20 text-lg text-center py-2 px-4 border-t border-white/10 rounded-4xl">
                 <p>
                     Idle Heroes is developed and published by{" "}
                     <a
