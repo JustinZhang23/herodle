@@ -247,13 +247,43 @@ export default function Home() {
                 </button>
 
                 {showHowTo && (
-                    <div className="mt-2 bg-black/50 p-4 rounded text-left leading-relaxed text-[clamp(0.75rem,1.1vw,0.95rem)]">
-                        <p>
-                            The objective of this game is to guess the <strong>Idle Hero</strong> based on the stats and hints provided.
+                    <div className="text-md mt-2 bg-black/50 p-2 rounded mx-auto text-left leading-relaxed text-white">
+                        <p>The objective of this game is to guess the <strong>Idle Hero</strong> based on the stats and hints provided throughout the game.</p>
+                        <p className="mt-2">For every hero submitted, each attribute will appear as green, yellow, or red depending on how close it is to the attributes of the Idle Hero.</p>
+                        <p className="mb-4">
+                            <ul className="list-disc ml-4 space-y-1 mt-2">
+                                <li><span className="text-green-600 font-bold">Green</span> means the attribute is identical to that of the Idle Hero.</li>
+                                <li><span className="text-yellow-500 font-bold">Yellow (only for Mechanic)</span> means the guessed hero shares a mechanic or mechanics with the Idle Hero,
+                                    indicating that there's an overlap. Ex: If the Idle Hero is Ithaqua (Poison and Bleed) and you guess Horus (Bleed), the mechanic box will be yellow.</li>
+                                <li><span className="text-red-600 font-bold">Red</span> means that the attribute is wrong. A red box indicates a complete mismatch.</li>
+                            </ul>
                         </p>
-                        <p className="mt-2">
-                            Each attribute will appear green, yellow, or red depending on how close it is.
+
+
+                        <p className="mb-4">
+                            <strong>Faction</strong> can help tell what origin the hero belongs to. Factions include Abyss, Shadow, Forest, Fortress, Light, and Dark.
                         </p>
+
+                        <p className="mb-4">
+                            <strong>Class</strong> tells you the hero's role in combat. Classes include Warrior, Mage, Ranger, Assassin, and Priest.
+                        </p>
+
+                        <p className="mb-4">
+                            <strong>Star Level</strong> indicates the hero's base power. Only <strong>Base Forms</strong> are allowed in the game. 4-star heroes forged to 5-star are not included, nor are Dummies.
+                        </p>
+
+                        <p className="mb-4">
+                            <strong>Dot</strong> refers to damage-over-time effects such as Burn, Poison, Bleed, or other unique damage effects.<br />
+                        </p>
+
+                        <p className="mb-4">
+                            <strong>Control</strong> includes crowd-control abilities like Stun, Freeze, Silence, Petrify, Taunt, and similar disabling effects.<br />
+                        </p>
+
+                        <p className="mb-0">
+                            <strong>Misc</strong> covers special mechanics such as Mark, Shield, or other unique utility effects. If a hero has none in a category, it will display as <strong>None</strong>.
+                        </p>
+
                     </div>
                 )}
             </div>
@@ -266,7 +296,7 @@ export default function Home() {
                 <a href="https://github.com/justinzhang23" className="underline" target="_blank" rel="noopener noreferrer">Justin Zhang
                 </a>
             </div>
-
+            
             <footer className="mt-8 text-white bg-black/20 text-sm text-center py-2 px-4 border-white/10 rounded-4xl">
                 <p>
                     Idle Heroes is developed and published by{" "}
