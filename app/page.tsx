@@ -202,24 +202,24 @@ export default function Home() {
                                 {/* Row of boxes for each attribute (grid items stretch to match tallest cell) */}
                                 <div className="grid grid-cols-7 gap-2 items-stretch">
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.name)} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                        <span className="truncate text-base">{formatValue(entry.guess?.name)}</span>
+                                        <span className="truncate text-sm">{formatValue(entry.guess?.name)}</span>
                                     </div>
 
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.faction)} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                        <span className="truncate text-base">{formatValue(entry.guess?.faction)}</span>
+                                        <span className="truncate text-sm">{formatValue(entry.guess?.faction)}</span>
                                     </div>
 
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.class)} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                        <span className="truncate text-base">{formatValue(entry.guess?.class)}</span>
+                                        <span className="truncate text-sm">{formatValue(entry.guess?.class)}</span>
                                     </div>
 
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.star)} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                        <span className="text-base">{formatValue(entry.guess?.star)}</span>
+                                        <span className="text-sm">{formatValue(entry.guess?.star)}</span>
                                     </div>
 
 
                                     <div className={`w-full flex flex-col items-center justify-center ${statusClass(res.dot)} text-center px-3 py-3 rounded-xl shadow-md`}>
-                                        <div className="whitespace-normal text-base text-center w-full">
+                                        <div className="whitespace-normal text-sm text-center w-full">
                                             {formatMechanicList(entry.guess?.dot).map((part: string, i: number) => (
                                                 <div key={i}>{formatValue(part)}</div>
                                             ))}
@@ -227,7 +227,7 @@ export default function Home() {
                                     </div>
 
                                     <div className={`w-full flex flex-col items-center justify-center ${statusClass(res.control)} text-center px-3 py-3 rounded-xl shadow-md`}>
-                                        <div className="whitespace-normal text-base text-center w-full">
+                                        <div className="whitespace-normal text-sm text-center w-full">
                                             {formatMechanicList(entry.guess?.control).map((part: string, i: number) => (
                                                 <div key={i}>{formatValue(part)}</div>
                                             ))}
@@ -235,7 +235,7 @@ export default function Home() {
                                     </div>
 
                                     <div className={`w-full flex flex-col items-center justify-center ${statusClass(res.misc)} text-center px-3 py-3 rounded-xl shadow-sm`}>
-                                        <div className="whitespace-normal text-base text-center w-full">
+                                        <div className="whitespace-normal text-sm text-center w-full">
                                             {formatMechanicList(entry.guess?.misc).map((part: string, i: number) => (
                                                 <div key={i}>{formatValue(part)}</div>
                                             ))}
