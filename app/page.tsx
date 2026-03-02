@@ -89,7 +89,7 @@ export default function Home() {
         <main
             className="flex flex-col items-center justify-center min-h-screen py-2 text-xl text-white"
             style={{
-                backgroundImage: 'url(/idleheroes.png)',
+                backgroundImage: 'url(/IdleHeroes.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed'
@@ -97,7 +97,7 @@ export default function Home() {
         >
             {/* logo header */}
             <div className="mb-0">
-                <img src="/herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
+                <img src="/Herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
             </div>
 
             {!gameWon ? (
