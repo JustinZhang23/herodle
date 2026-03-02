@@ -4,41 +4,1079 @@
     "faction": "Shadow",
     "class": "Ranger",
     "star": 5,
-    "effect": "Skill"
+    "dot": "",
+    "control": "",
+    "misc": ""
   },
   {
     "name": "Norton Haig",
     "faction": "Shadow",
     "class": "Warrior",
     "star": 5,
-    "effect": "Skill"
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
   },
   {
     "name": "Betty",
     "faction": "Shadow",
     "class": "Mage",
     "star": 5,
-    "effect": "DoT, Control"
+    "dot": "Bleed",
+    "control": "Twine",
+    "misc": ""
   },
   {
     "name": "Azrael",
     "faction": "Shadow",
     "class": "Assassin",
     "star": 5,
-    "effect": "Skill"
+    "dot": "",
+    "control": "",
+    "misc": ""
   },
   {
     "name": "Annabelle",
     "faction": "Shadow",
     "class": "Priest",
     "star": 5,
-    "effect": "Skill"
+    "dot": "",
+    "control": "",
+    "misc": ""
   },
   {
     "name": "Onkirimaru",
     "faction": "Shadow",
     "class": "Warrior",
     "star": 5,
-    "effect": "DoT"
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Eloise",
+    "faction": "Shadow",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Scarred Soul",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Tix",
+    "faction": "Shadow",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Silence, Horrify",
+    "misc": ""
+  },
+  {
+    "name": "Ithaqua",
+    "faction": "Shadow",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Poison, Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Gustin",
+    "faction": "Shadow",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Horus",
+    "faction": "Shadow",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Jahra",
+    "faction": "Shadow",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Freeze, Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Walter",
+    "faction": "Shadow",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Aidan",
+    "faction": "Shadow",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Silence",
+    "misc": ""
+  },
+  {
+    "name": "Kamath",
+    "faction": "Shadow",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Baade",
+    "faction": "Shadow",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Corpsedemon",
+    "faction": "Shadow",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Freeze",
+    "misc": ""
+  },
+  {
+    "name": "Field",
+    "faction": "Shadow",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Lutz",
+    "faction": "Shadow",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Dominator",
+    "faction": "Shadow",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Blood Blade",
+    "faction": "Shadow",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Kaharma",
+    "faction": "Shadow",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Madeleine",
+    "faction": "Fortress",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": "Shield"
+  },
+  {
+    "name": "Finn",
+    "faction": "Fortress",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "Shapeshifting",
+    "misc": ""
+  },
+  {
+    "name": "Luna",
+    "faction": "Fortress",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Aylamak",
+    "faction": "Fortress",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Holmes Young",
+    "faction": "Fortress",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Shapeshifting",
+    "misc": ""
+  },
+  {
+    "name": "Saja",
+    "faction": "Fortress",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Fiona",
+    "faction": "Fortress",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Shield"
+  },
+  {
+    "name": "Inosuke",
+    "faction": "Fortress",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Shield"
+  },
+  {
+    "name": "Sherlock",
+    "faction": "Fortress",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Shapeshifting",
+    "misc": ""
+  },
+  {
+    "name": "Unimax-3000",
+    "faction": "Fortress",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Taunt",
+    "misc": ""
+  },
+  {
+    "name": "Penny",
+    "faction": "Fortress",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Xia",
+    "faction": "Fortress",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Valentino",
+    "faction": "Fortress",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "OD-01",
+    "faction": "Fortress",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Silence",
+    "misc": ""
+  },
+  {
+    "name": "Miki",
+    "faction": "Fortress",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Mirage",
+    "faction": "Fortress",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Sigmund",
+    "faction": "Fortress",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Bleecker",
+    "faction": "Fortress",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Iceblink",
+    "faction": "Fortress",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "Freeze",
+    "misc": ""
+  },
+  {
+    "name": "Flame Strike",
+    "faction": "Fortress",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Honor Guard",
+    "faction": "Fortress",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Ormus",
+    "faction": "Fortress",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Emily",
+    "faction": "Fortress",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Ignacia",
+    "faction": "Abyss",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Williams",
+    "faction": "Abyss",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Gaggie",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Burn",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Aranea",
+    "faction": "Abyss",
+    "class": "Priest",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Natasha",
+    "faction": "Abyss",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Waldeck",
+    "faction": "Abyss",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Morax",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Ignis",
+    "faction": "Abyss",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Delacium",
+    "faction": "Abyss",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Nakia",
+    "faction": "Abyss",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Cthugha",
+    "faction": "Abyss",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Burn, Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Kroos",
+    "faction": "Abyss",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": "Mark"
+  },
+  {
+    "name": "Karim",
+    "faction": "Abyss",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Gusta",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Fat Mu",
+    "faction": "Abyss",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "King Barton",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Lord Balrog",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Queen",
+    "faction": "Abyss",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Barea",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Margaret",
+    "faction": "Abyss",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Dantalian",
+    "faction": "Abyss",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Skerei",
+    "faction": "Abyss",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Sylvie",
+    "faction": "Forest",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Melissa",
+    "faction": "Forest",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Shield"
+  },
+  {
+    "name": "Geester",
+    "faction": "Forest",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "Poison, Burn",
+    "control": "Twine",
+    "misc": ""
+  },
+  {
+    "name": "Freya",
+    "faction": "Forest",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Shield"
+  },
+  {
+    "name": "Xiahou",
+    "faction": "Forest",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Gloria",
+    "faction": "Forest",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Flora",
+    "faction": "Forest",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Twine",
+    "misc": ""
+  },
+  {
+    "name": "Rogan",
+    "faction": "Forest",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Elyvia",
+    "faction": "Forest",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Garuda",
+    "faction": "Forest",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Oberon",
+    "faction": "Forest",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Twine",
+    "misc": ""
+  },
+  {
+    "name": "Valkyrie",
+    "faction": "Forest",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Heart Watcher",
+    "faction": "Forest",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Malassa",
+    "faction": "Forest",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Poison",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Vesa",
+    "faction": "Forest",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Silence",
+    "misc": ""
+  },
+  {
+    "name": "Eddga",
+    "faction": "Forest",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Groo",
+    "faction": "Forest",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Starlight",
+    "faction": "Forest",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Stun, Silence, Freeze, Petrify, Horrify",
+    "misc": ""
+  },
+  {
+    "name": "Rosa",
+    "faction": "Forest",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Faceless",
+    "faction": "Forest",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Dragon Slayer",
+    "faction": "Forest",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "Burn",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Demon Hunter",
+    "faction": "Forest",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Poison",
+    "control": "Silence",
+    "misc": ""
+  },
+  {
+    "name": "Vespera",
+    "faction": "Dark",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Alikita",
+    "faction": "Dark",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Patricia",
+    "faction": "Dark",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Elena",
+    "faction": "Dark",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Mockman",
+    "faction": "Dark",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Taunt",
+    "misc": ""
+  },
+  {
+    "name": "Phorcys",
+    "faction": "Dark",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Drake",
+    "faction": "Dark",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Carrie",
+    "faction": "Dark",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Amen-Ra",
+    "faction": "Dark",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": "Mark"
+  },
+  {
+    "name": "Aspen",
+    "faction": "Dark",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Horrify",
+    "misc": ""
+  },
+  {
+    "name": "Mihm",
+    "faction": "Dark",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Das Moge",
+    "faction": "Dark",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Bleed",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Sleepless",
+    "faction": "Dark",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": "Mark"
+  },
+  {
+    "name": "Amuvor",
+    "faction": "Dark",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Dark Arthindol",
+    "faction": "Dark",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "Petrify",
+    "misc": ""
+  },
+  {
+    "name": "Oscar",
+    "faction": "Light",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Burn",
+    "control": "Dazzle",
+    "misc": ""
+  },
+  {
+    "name": "Monkey King - Sun Wukong",
+    "faction": "Light",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Yorhm Tum",
+    "faction": "Light",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Natalie",
+    "faction": "Light",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Vulcan",
+    "faction": "Light",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Fear",
+    "misc": "Shield"
+  },
+  {
+    "name": "Eos",
+    "faction": "Light",
+    "class": "Mage",
+    "star": 5,
+    "dot": "Burn",
+    "control": "Dazzle, Taunt",
+    "misc": ""
+  },
+  {
+    "name": "Andrea",
+    "faction": "Light",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Tussilago",
+    "faction": "Light",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Russell",
+    "faction": "Light",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "",
+    "control": "Dazzle, Taunt",
+    "misc": ""
+  },
+  {
+    "name": "Tara",
+    "faction": "Light",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "Seal of Light",
+    "misc": ""
+  },
+  {
+    "name": "Aida",
+    "faction": "Light",
+    "class": "Mage",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Belrain",
+    "faction": "Light",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
+  },
+  {
+    "name": "Faith Blade",
+    "faction": "Light",
+    "class": "Assassin",
+    "star": 5,
+    "dot": "",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Michelle",
+    "faction": "Light",
+    "class": "Ranger",
+    "star": 5,
+    "dot": "Burn",
+    "control": "Stun",
+    "misc": ""
+  },
+  {
+    "name": "Asmodel",
+    "faction": "Light",
+    "class": "Warrior",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": "Mark"
+  },
+  {
+    "name": "Gerke",
+    "faction": "Light",
+    "class": "Priest",
+    "star": 5,
+    "dot": "",
+    "control": "",
+    "misc": ""
   }
 ]

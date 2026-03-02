@@ -3,5 +3,7 @@ export type Hero = {
     faction : string;
     class : string;
     star : number;
-    effect : string;
+    dot : string;
+    control : string;
+    misc : string;
 }

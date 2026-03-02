@@ -5,27 +5,71 @@ export type ComparisonResult = {
 }
 
 export function compareHeroes(guess: Hero, secret: Hero): ComparisonResult {
-    // helper splits comma-separated effects and normalizes
-    const splitEffects = (s: string) =>
+    //helper splits comma-separated dot and normalizes
+    const splitDoT = (s: string) =>
         s
             .split(',')
             .map((p) => p.trim().toLowerCase())
             .filter((p) => p.length > 0);
 
-    const guessEffs = splitEffects(guess.effect);
-    const secretEffs = splitEffects(secret.effect);
+    const guessDot = splitDoT(guess.dot);
+    const secretDot = splitDoT(secret.dot);
 
-    let effectResult: "Correct" | "Partially Correct" | "Incorrect";
+    let dotResult: "Correct" | "Partially Correct" | "Incorrect";
     if (
-        guessEffs.length === secretEffs.length &&
-        guessEffs.every((g) => secretEffs.includes(g))
+        guessDot.length === secretDot   .length &&
+        guessDot.every((g) => secretDot.includes(g))
     ) {
-        effectResult = "Correct";
-    } else if (guessEffs.some((g) => secretEffs.includes(g))) {
-        effectResult = "Partially Correct";
+        dotResult = "Correct";
+    } else if (guessDot.some((g) => secretDot.includes(g))) {
+        dotResult = "Partially Correct";
     } else {
-        effectResult = "Incorrect";
+        dotResult = "Incorrect";
     }
+
+    //helper splits comma-separated control and normalizes
+    const splitControl = (s: string) =>
+        s
+            .split(',')
+            .map((p) => p.trim().toLowerCase())
+            .filter((p) => p.length > 0);
+
+    const guessControl = splitControl(guess.control);
+    const secretControl = splitControl(secret.control);
+
+    let controlResult: "Correct" | "Partially Correct" | "Incorrect";
+    if (
+        guessControl.length === secretControl.length &&
+        guessControl.every((g) => secretControl.includes(g))
+    ) {
+        controlResult = "Correct";
+    } else if (guessControl.some((g) => secretControl.includes(g))) {
+        controlResult = "Partially Correct";
+    } else {
+        controlResult = "Incorrect";
+    }
+
+    //helper splits comma-separated misc and normalizes
+    const splitMisc = (s: string) =>
+        s
+            .split(',')
+            .map((p) => p.trim().toLowerCase())
+            .filter((p) => p.length > 0);
+
+    const guessMisc = splitMisc(guess.misc);
+    const secretMisc = splitMisc(secret.misc);
+
+    let miscResult: "Correct" | "Partially Correct" | "Incorrect";
+    if (
+        guessMisc.length === secretMisc.length &&
+        guessMisc.every((g) => secretMisc.includes(g))
+    ) {
+        miscResult = "Correct";
+    } else if (guessMisc.some((g) => secretMisc.includes(g))) {
+        miscResult = "Partially Correct";
+    } else {
+        miscResult = "Incorrect";
+    }  
 
     return {
         name: guess.name === secret.name ? "Correct" : "Incorrect",
@@ -36,7 +80,11 @@ export function compareHeroes(guess: Hero, secret: Hero): ComparisonResult {
         
         star: guess.star === secret.star ? "Correct" : Math.abs(guess.star - secret.star) < 1 ? "Partially Correct" : "Incorrect",
         
-        effect: effectResult,
+        dot: dotResult,
+
+        control: controlResult,
+
+        misc: miscResult,
     }
 }
 

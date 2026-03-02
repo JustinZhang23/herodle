@@ -50,7 +50,7 @@ export default function GuessInput({ onGuess }: Props) {
                     setGuessInput(e.target.value);
                     setShowDropdown(true);
                 }}
-                placeholder="Enter Hero name"
+                placeholder="Enter Hero name..."
                 className="border p-2 mb-4 w-64"
             />
             {showDropdown && filteredHeroes.length > 0 && (
