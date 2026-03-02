@@ -166,13 +166,12 @@ export default function Home() {
             )}
 
             {history.length > 0 && (
-                <div className="mt-2 w-full max-w-2xl">
+                <div className="mt-2 w-full max-w-xl">
                     {/* Column titles */}
-                    <div className="grid grid-cols-7 gap-2 text-md font-semibold text-white-700">
+                    <div className="grid grid-cols-6 gap-2 text-md font-semibold text-white-700">
                         <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Name</div>
                         <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Faction</div>
                         <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Class</div>
-                        <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Star</div>
                         <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Dot</div>
                         <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Control</div>
                         <div className="text-center bg-black/25 px-2 py-1 rounded-4xl">Misc</div>
@@ -200,8 +199,8 @@ export default function Home() {
                         return (
                             <div key={index} className="mb-2">
                                 {/* Row of boxes for each attribute (grid items stretch to match tallest cell) */}
-                                <div className="grid grid-cols-7 gap-2 items-stretch">
-                                    <div className={`w-full flex items-center justify-center ${statusClass(res.name)} text-center px-2 py-3 rounded-xl shadow-md`}>
+                                <div className="grid grid-cols-6 gap-2 items-stretch">
+                                    <div className={`w-full+full flex items-center justify-center ${statusClass(res.name)} text-center px-2 py-3 rounded-xl shadow-md`}>
                                         <span className="truncate text-sm">{formatValue(entry.guess?.name)}</span>
                                     </div>
 
@@ -212,11 +211,6 @@ export default function Home() {
                                     <div className={`w-full flex items-center justify-center ${statusClass(res.class)} text-center px-2 py-3 rounded-xl shadow-md`}>
                                         <span className="truncate text-sm">{formatValue(entry.guess?.class)}</span>
                                     </div>
-
-                                    <div className={`w-full flex items-center justify-center ${statusClass(res.star)} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                        <span className="text-sm">{formatValue(entry.guess?.star)}</span>
-                                    </div>
-
 
                                     <div className={`w-full flex flex-col items-center justify-center ${statusClass(res.dot)} text-center px-3 py-3 rounded-xl shadow-md`}>
                                         <div className="whitespace-normal text-sm text-center w-full">
@@ -308,7 +302,7 @@ export default function Home() {
             </div>
 
 
-            <footer className="mt-8 text-white bg-black/20 text-sm text-center py-2 px-4 border-t border-white/10 rounded-4xl">
+            <footer className="mt-8 text-white bg-black/20 text-sm text-center py-2 px-4 border-white/10 rounded-4xl">
                 <p>
                     Idle Heroes is developed and published by{" "}
                     <a
