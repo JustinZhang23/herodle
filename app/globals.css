@@ -19,6 +19,25 @@
   }
 }
 
+@keyframes dropFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-drop {
+  animation: dropFade 0.45s ease forwards;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

@@ -145,7 +145,7 @@ export default function Home() {
                                 }
                             }}
                             placeholder="Enter Hero name"
-                            className="border p-2 flex-1 bg-black/20 py-1 px-3 rounded-full text-[clamp(0.8rem,1.2vw,1rem)]"
+                            className="border p-2 flex-1 bg-black/20 py-1 px-3 rounded-full text-[clamp(0.8rem,1.2vw,1rem)] text-[16px]"
                             disabled={gameWon}
                             onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
                             onFocus={() => setShowSuggestions(suggestions.length > 0)}
@@ -197,8 +197,11 @@ export default function Home() {
 
                     {/* Column Titles */}
                     <div className="grid grid-cols-6 gap-2 font-semibold text-[clamp(0.7rem,1.2vw,1rem)]">
-                        {["Name", "Faction", "Class", "Dot", "Control", "Misc"].map((label) => (
-                            <div key={label} className="text-center bg-black/25 px-2 py-1 rounded-full">
+                        {["Name", "Faction", "Class", "Dot", "Control", "Misc"].map((label, colIndex) => (
+                            <div
+                                key={label}
+                                style={{ animationDelay: `${colIndex * 120}ms` }}
+                                className="text-center bg-black/25 px-2 py-1 rounded-full animate-drop">
                                 {label}
                             </div>
                         ))}
@@ -206,30 +209,44 @@ export default function Home() {
 
                     {history.map((entry, index) => {
                         const res = entry.result.comparisonResult;
+                        const rowKey = `${entry.guess?.name ?? index}-${history.length}`;
 
                         return (
-                            <div key={index} className="mb-2">
+                            <div key={rowKey} className="mb-2">
                                 <div className="grid grid-cols-6 gap-2 items-stretch text-[clamp(0.65rem,1vw,0.9rem)]">
 
-                                    {["name", "faction", "class"].map((key) => (
-                                        <div key={key}
-                                            className={`flex items-center justify-center ${statusClass(res[key])} text-center px-2 py-3 rounded-xl shadow-md`}>
-                                            <span className="truncate">
-                                                {formatValue(entry.guess?.[key])}
-                                            </span>
-                                        </div>
-                                    ))}
-
-                                    {["dot", "control", "misc"].map((key) => (
-                                        <div key={key}
-                                            className={`flex flex-col items-center justify-center ${statusClass(res[key])} text-center px-3 py-3 rounded-xl shadow-md`}>
-                                            <div className="whitespace-normal text-center w-full">
-                                                {formatMechanicList(entry.guess?.[key]).map((part: string, i: number) => (
-                                                    <div key={i}>{formatValue(part)}</div>
-                                                ))}
+                                    {["name", "faction", "class"].map((key, colIndex) => {
+                                        const isNewest = index === 0;
+                                        return (
+                                            <div
+                                                key={key}
+                                                style={isNewest ? { animationDelay: `${colIndex * 120}ms` } : {}}
+                                                className={`${isNewest ? "animate-drop" : ""} flex items-center justify-center ${statusClass(res[key])} text-center px-2 py-3 rounded-xl shadow-md`}
+                                            >
+                                                <span className="truncate">
+                                                    {formatValue(entry.guess?.[key])}
+                                                </span>
                                             </div>
-                                        </div>
-                                    ))}
+                                        );
+                                    })}
+
+                                    {["dot", "control", "misc"].map((key, colIndex) => {
+                                        const isNewest = index === 0;
+
+                                        return (
+                                            <div
+                                                key={key}
+                                                style={isNewest ? { animationDelay: `${(colIndex + 3) * 120}ms` } : {}}
+                                                className={`${isNewest ? "animate-drop" : ""} flex flex-col items-center justify-center ${statusClass(res[key])} text-center px-3 py-3 rounded-xl shadow-md`}
+                                            >
+                                                <div className="whitespace-normal text-center w-full">
+                                                    {formatMechanicList(entry.guess?.[key]).map((part: string, i: number) => (
+                                                        <div key={i}>{formatValue(part)}</div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )
@@ -289,14 +306,14 @@ export default function Home() {
             </div>
 
             <div className="mt-8 text-white-600 text-xs text-center">
-                Made by 
+                Made by
             </div>
 
             <div className="text-white-600 text-xs text-center">
                 <a href="https://github.com/justinzhang23" className="underline" target="_blank" rel="noopener noreferrer">Justin Zhang
                 </a>
             </div>
-            
+
             <footer className="mt-8 text-white bg-black/20 text-sm text-center py-2 px-4 border-white/10 rounded-4xl">
                 <p>
                     Idle Heroes is developed and published by{" "}
