@@ -98,13 +98,17 @@ export default function Home() {
     return (
         <main
             className="flex flex-col items-center justify-center min-h-screen py-2 text-[clamp(0.9rem,1.2vw,1.2rem)] text-white"
-            style={{
-                backgroundImage: 'url(/IdleHeroes.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundAttachment: 'fixed'
-            }}
         >
+
+            <div className="fixed inset-0 -z-10">
+  <img
+    src="/IdleHeroes.png"
+    className="w-full h-full object-cover"
+    alt="background"
+  />
+  <div className="absolute inset-0"></div>
+</div>
+
             {/* Logo */}
             <div>
                 <img src="/Herodle.png" alt="Herodle" className="w-auto h-48 sm:h-56 md:h-64 lg:h-72" />
@@ -213,7 +217,9 @@ export default function Home() {
 
                         return (
                             <div key={rowKey} className="mb-2">
-                                <div className="grid grid-cols-6 gap-2 items-stretch text-[clamp(0.65rem,1vw,0.9rem)]">
+                                <div
+                                    className="grid grid-cols-6 gap-2 items-stretch w-full"
+                                    style={{ gridTemplateColumns: "repeat(6, minmax(0, 1fr))" }}>
 
                                     {["name", "faction", "class"].map((key, colIndex) => {
                                         const isNewest = index === 0;
@@ -221,7 +227,7 @@ export default function Home() {
                                             <div
                                                 key={key}
                                                 style={isNewest ? { animationDelay: `${colIndex * 120}ms` } : {}}
-                                                className={`${isNewest ? "animate-drop" : ""} flex items-center justify-center ${statusClass(res[key])} text-center px-2 py-3 rounded-xl shadow-md`}
+                                                className={`${isNewest ? "animate-drop" : ""} flex items-center justify-center min-w-0 ${statusClass(res[key])} text-center px-2 py-3 rounded-xl shadow-md`}
                                             >
                                                 <span className="truncate">
                                                     {formatValue(entry.guess?.[key])}
@@ -232,16 +238,17 @@ export default function Home() {
 
                                     {["dot", "control", "misc"].map((key, colIndex) => {
                                         const isNewest = index === 0;
-
                                         return (
                                             <div
                                                 key={key}
                                                 style={isNewest ? { animationDelay: `${(colIndex + 3) * 120}ms` } : {}}
-                                                className={`${isNewest ? "animate-drop" : ""} flex flex-col items-center justify-center ${statusClass(res[key])} text-center px-3 py-3 rounded-xl shadow-md`}
+                                                className={`${isNewest ? "animate-drop" : ""} flex flex-col items-stretch justify-center overflow-hidden min-w-0 ${statusClass(res[key])} text-center px-3 py-3 rounded-xl shadow-md`}
                                             >
-                                                <div className="whitespace-normal text-center w-full">
+                                                <div className="w-full min-w-0">
                                                     {formatMechanicList(entry.guess?.[key]).map((part: string, i: number) => (
-                                                        <div key={i}>{formatValue(part)}</div>
+                                                        <div key={i} className="truncate block w-full min-w-0 unbreakable">
+                                                            {formatValue(part)}
+                                                        </div>
                                                     ))}
                                                 </div>
                                             </div>
@@ -267,15 +274,12 @@ export default function Home() {
                     <div className="text-md mt-2 bg-black/50 p-2 rounded mx-auto text-left leading-relaxed text-white">
                         <p>The objective of this game is to guess the <strong>Idle Hero</strong> based on the stats and hints provided throughout the game.</p>
                         <p className="mt-2">For every hero submitted, each attribute will appear as green, yellow, or red depending on how close it is to the attributes of the Idle Hero.</p>
-                        <p className="mb-4">
-                            <ul className="list-disc ml-4 space-y-1 mt-2">
-                                <li><span className="text-green-600 font-bold">Green</span> means the attribute is identical to that of the Idle Hero.</li>
-                                <li><span className="text-yellow-500 font-bold">Yellow (only for Mechanic)</span> means the guessed hero shares a mechanic or mechanics with the Idle Hero,
-                                    indicating that there's an overlap. Ex: If the Idle Hero is Ithaqua (Poison and Bleed) and you guess Horus (Bleed), the mechanic box will be yellow.</li>
-                                <li><span className="text-red-600 font-bold">Red</span> means that the attribute is wrong. A red box indicates a complete mismatch.</li>
-                            </ul>
-                        </p>
-
+                        <ul className="list-disc ml-4 space-y-1 mt-2">
+                            <li><span className="text-green-600 font-bold">Green</span> means the attribute is identical to that of the Idle Hero.</li>
+                            <li><span className="text-yellow-500 font-bold">Yellow (only for Mechanic)</span> means the guessed hero shares a mechanic or mechanics with the Idle Hero,
+                                indicating that there's an overlap. Ex: If the Idle Hero is Ithaqua (Poison and Bleed) and you guess Horus (Bleed), the mechanic box will be yellow.</li>
+                            <li><span className="text-red-600 font-bold">Red</span> means that the attribute is wrong. A red box indicates a complete mismatch.</li>
+                        </ul>
 
                         <p className="mb-4">
                             <strong>Faction</strong> can help tell what origin the hero belongs to. Factions include Abyss, Shadow, Forest, Fortress, Light, and Dark.
