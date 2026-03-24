@@ -5,6 +5,7 @@ import image from 'next/image';
 
 
 export default function Home() {
+    const [gameId, setGameId] = useState<string | null>(null);
     const [guessInput, setGuessInput] = useState("");
     const [history, setHistory] = useState<any[]>([])
     const [names, setNames] = useState<string[]>([])
@@ -14,7 +15,8 @@ export default function Home() {
     const [gameWon, setGameWon] = useState(false)
 
     async function handleGuess() {
-        if (gameWon) return;
+        if (gameWon || !gameId) return;        
+        
         const trimmed = guessInput.trim();
 
         if (!trimmed || !names.some(n => n.toLowerCase() === trimmed.toLowerCase())) {
@@ -28,7 +30,7 @@ export default function Home() {
         const response = await fetch('/api/guess', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: trimmed })
+            body: JSON.stringify({ name: trimmed, gameId }),
         });
 
         const data = await response.json();
@@ -47,33 +49,64 @@ export default function Home() {
 
     async function handleNewHero() {
         try {
-            await fetch("/api/new-heroes");
+            // Request a new hero and get the new gameId
+            const res = await fetch("/api/new-heroes", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ gameId })
+            });
 
+            const data = await res.json();
+            if (!data.gameId) throw new Error("No gameId returned");
+
+            // Update localStorage and state with the new gameId
+            localStorage.setItem("gameId", data.gameId);
+            setGameId(data.gameId);
+
+            // Reset game state
             setHistory([]);
             setGameWon(false);
             setGuessInput("");
             setSuggestions([]);
             setShowSuggestions(false);
 
-            const res = await fetch("/api/heroes");
-            const data = await res.json();
-            setNames(data.names || []);
+            // Refresh available hero names
+            const heroRes = await fetch("/api/heroes");
+            const heroData = await heroRes.json();
+            setNames(heroData.names || []);
         } catch (err) {
             console.error("Failed to get new hero", err);
         }
     }
 
     useEffect(() => {
-        let mounted = true
-        fetch('/api/heroes')
-            .then(r => r.json())
-            .then(data => {
-                if (!mounted) return
-                setNames(data.names || [])
-            })
-            .catch(() => { })
-        return () => { mounted = false }
-    }, [])
+    fetch("/api/heroes")
+        .then(res => res.json())
+        .then(data => {
+            setNames(data.names || []);
+
+            let id = localStorage.getItem("gameId");
+
+            let valid = false;
+            if (id) {
+                try {
+                    JSON.parse(atob(id));
+                    valid = true;
+                } catch {
+                    valid = false;
+                }
+            }
+
+            // If invalid (old UUID), generate new one
+            if (!valid && data.names.length > 0) {
+                const hero = data.names[Math.floor(Math.random() * data.names.length)];
+                id = btoa(JSON.stringify(hero));
+                localStorage.setItem("gameId", id);
+            }
+
+            setGameId(id);
+        });
+}, []);
 
     const formatValue = (v: any) => {
         if (v === null || v === undefined) return "-";
@@ -101,13 +134,13 @@ export default function Home() {
         >
 
             <div className="fixed inset-0 -z-10">
-  <img
-    src="/IdleHeroes.png"
-    className="w-full h-full object-cover"
-    alt="background"
-  />
-  <div className="absolute inset-0"></div>
-</div>
+                <img
+                    src="/IdleHeroes.png"
+                    className="w-full h-full object-cover"
+                    alt="background"
+                />
+                <div className="absolute inset-0"></div>
+            </div>
 
             {/* Logo */}
             <div>
@@ -212,7 +245,15 @@ export default function Home() {
                     </div>
 
                     {history.map((entry, index) => {
-                        const res = entry.result.comparisonResult;
+                        const res = entry.result.comparisonResult ?? {
+                            name: "",
+                            faction: "",
+                            class: "",
+                            dot: "",
+                            control: "",
+                            misc: "",
+
+                        };
                         const rowKey = `${entry.guess?.name ?? index}-${history.length}`;
 
                         return (

@@ -1,17 +1,28 @@
 import { HeroData } from "./data";
 
-let secretHero = HeroData[Math.floor(Math.random() * HeroData.length)];
+const games = new Map<string, any>();
 
-export function getSecretHero() {
-  return secretHero;
+function getRandomHero() {
+  return HeroData[Math.floor(Math.random() * HeroData.length)];
 }
 
-// Pick a new secret hero (updates the server state)
-export function pickNewSecretHero() {
-  let newHero = secretHero;
-  while (newHero.name === secretHero.name) {
-    newHero = HeroData[Math.floor(Math.random() * HeroData.length)];
+// Get or create hero for a specific game
+export function getSecretHero(gameId: string) {
+  if (!games.has(gameId)) {
+    games.set(gameId, getRandomHero());
   }
-  secretHero = newHero;
-  return secretHero;
+  return games.get(gameId);
+}
+
+// Pick new hero for a specific game
+export function pickNewSecretHero(gameId: string) {
+  const current = games.get(gameId) || getRandomHero();
+
+  let newHero = current;
+  while (newHero.name === current.name) {
+    newHero = getRandomHero();
+  }
+
+  games.set(gameId, newHero);
+  return newHero;
 }

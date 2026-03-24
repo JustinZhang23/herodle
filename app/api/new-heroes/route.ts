@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
-import { pickNewSecretHero } from "@/lib/secret";
+import { HeroData } from "@/lib/data";
 
-export async function GET() {
-  const hero = pickNewSecretHero(); // MUST call this
-  console.log("New hero picked:", hero.name);
-  return NextResponse.json({ success: true });
+export async function POST(req: Request) {
+    // Pick a random hero
+    const newHero = HeroData[Math.floor(Math.random() * HeroData.length)];
+
+    // Encode into gameId
+    const newGameId = btoa(JSON.stringify(newHero.name));
+
+    return NextResponse.json({ gameId: newGameId });
 }
